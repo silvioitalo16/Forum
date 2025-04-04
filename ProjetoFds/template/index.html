@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroHub - Fórum Rural</title>
+    <!-- Linkando o arquivo de estilos -->
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body>
+    <!-- Cabeçalho do site -->
+    <header>
+      <div class="logo">
+        <img src="/static/macaco.jpg" alt="Logo AgroHub" />
+        AgroHub
+      </div>
+      <div class="search-container">
+        <img
+          src="ProjetoForum/icones/Lupas/searchpreto32px.png"
+          alt="Pesquisar"
+          class="lupa-icon"
+        />
+        <input type="text" placeholder="Pesquisar..." class="search" />
+      </div>
+      <nav>
+        <a href="#"
+          ><img
+            src="ProjetoForum/icones/House/house.png"
+            alt="Paginainicial"
+            width="16"
+            height="16"
+        /></a>
+        <a href="#"
+          ><img
+            src="ProjetoForum/icones/Friend/duas pessoas.png"
+            alt="Amizades"
+            width="16"
+            height="16"
+        /></a>
+        <a href="#"
+          ><img
+            src="ProjetoForum/icones/Message/message1.png"
+            alt="Mensagens"
+            width="16"
+            height="16"
+        /></a>
+        <a href="#"
+          ><img
+            src="ProjetoForum/icones/Notification/notificação1.png"
+            alt="Notificação"
+            width="16"
+            height="16"
+        /></a>
+      </nav>
+      <div class="user-options">
+        <a href="perfil.html">
+          <img
+            src="ProjetoForum/Fotodeperfil/silviofoto.jpg"
+            alt="Perfil"
+            class="perfil-img"
+          />
+        </a>
+        <select class="idioma">
+          <option value="pt-br">PT-BR</option>
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select>
+        <button id="darkModeBtn">
+          <img
+            src="ProjetoForum/icones/Dark Mode/dark-mode.png"
+            alt="Modo Escuro"
+            class="icon-dark"
+          />
+        </button>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal dividido em barra lateral e conteúdo -->
+    <main>
+      <!-- Barra lateral com temas em alta -->
+      <aside class="sidebar">
+        <h3>Temas em alta</h3>
+        <ul>
+          <li>Exportações de carne batem recorde</li>
+          <li>Preços do boi gordo</li>
+          <li>Maior usina de biogás</li>
+          <li>Preços mínimos do café</li>
+        </ul>
+      </aside>
+
+      <!-- Área principal de postagens -->
+      <div class="publicar-box">
+        <div class="publicar-topo">
+          <img src="ProjetoForum/Fotodeperfil/silviofoto.jpg" alt="Perfil" class="perfil-img">
+          <input type="text" placeholder="Compartilhe uma notícia..." class="publicar-input">
+        </div>
+        <!-- Botões para publicar notícias -->
+        <div class="publicar-acoes">
+          <button><img src="ProjetoForum/icones/Image/image1.png" alt="Mídia" width="16" height="16"></button>
+          <button><img src="ProjetoForum/icones/Question/book-alt.png" alt="Questionário" width="16" height="16"> </button>
+          <button><img src="ProjetoForum/icones/Article/artigo1.png" alt="Artigo" width="16" height="16"></button>
+        </div>
+      </div>
+
+        <!-- Postagem -->
+        <div class="post">
+          <div class="post-header"><strong>Canal Rural</strong> - 1d atrás</div>
+          <h2>
+            JBS Ajudou A Regularizar 15 Mil Propriedades Rurais Em 4 Anos.
+          </h2>
+          <p>
+            Iniciativa ofereceu assistência que contribuiu com a reposição de
+            mais de quatro mil hectares de vegetação nativa...
+          </p>
+          <img
+            src="/static/vaquinha.jpg"
+            alt="Vaca e bezerro"
+          />
+          <!-- Ações do post -->
+          <div class="post-actions">
+            <button id="likeBtn">👍 Gostei (<span id="likes">0</span>)</button>
+            <button id="commentBtn">💬 Comentar</button>
+            <button>🔄 Compartilhar</button>
+          </div>
+          <!-- Comentários aparecerão aqui -->
+          <div id="comentarios"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>AgroHub © 2025 - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Linkando o arquivo JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
