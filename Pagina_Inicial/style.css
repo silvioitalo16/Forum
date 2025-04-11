@@ -3,85 +3,103 @@
    ======================= */
 
 /* Estilo geral da página */
-* {
-  padding: 0;
-  margin: 0;
-}
 body {
   margin: 0; /* Remove margens padrão */
   font-family: Arial, sans-serif; /* Fonte principal */
   background-color: #d4d0d0; /* Cor de fundo */
-  padding-bottom: 60px;
+  padding-bottom: 60px; /* Espaço inferior da página */
+  background-image: url("ProjetoForum/Fundo/meiocinza.jpg");
+  background-size: cover; /* cobre toda a tela */
+  background-repeat: no-repeat; /* evita repetição da imagem */
+  background-position: center; /* centraliza a imagem */
 }
 /* Estilo para modo escuro */
 body.dark-mode {
-  background-color: #121212;
-  color: #f5f5f5;
+  background-image: none; /* remove a imagem */
+  background-color: #121212;/* Cor de fundo escura */
+  color: #f5f5f5;/* Cor do texto clara */
 }
+/* Aplica o modo escuro a diversos componentes */
 body.dark-mode header,
 body.dark-mode footer,
 body.dark-mode .sidebar,
-body.dark-mode .post {
-  background-color: #1e1e1e;
-  color: #f5f5f5;
+body.dark-mode .post,
+body.dark-mode .publicar-box,
+body.dark-mode .publicar-acoes,
+body.dark-mode .painel-lateral,
+body.dark-mode .balao-mensagens,
+body.dark-mode .cabecalho-mensagens,
+body.dark-mode .corpo-mensagens {
+  background-color: #1e1e1e;/* Fundo escuro */
+  color: #f5f5f5;/* Texto claro */
 }
-.icon-dark {
-  width: 16px;
-  height: 16px;
+/* Botão de alternar modo escuro */
+#darkModeBtn {
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+  font-size: 20px; /* Tamanho do ícone */
+  cursor: pointer; /* Cursor de clique */
 }
 
 /* Cabeçalho */
 header {
-  display: flex;
+  display: flex;/* Layout flexível horizontal */
   background-color: #ffffff; /* Fundo branco */
   display: flex; /* Layout flexível */
   align-items: center; /* Alinhamento vertical */
   justify-content: flex-start; /* Espaço entre logo, pesquisa e navegação */
   padding: 10px 20px; /* Espaçamento interno */
   border-bottom: 1px solid #ddd; /* Linha inferior */
-  gap: 20px;
+  gap: 20px;/* Espaço entre os elementos */
 }
-
+/* Container do logo */
 .logo {
   display: flex;
   align-items: center; /* Alinha verticalmente */
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 20px;/* Tamanho da fonte */
+  font-weight: bold;/* Peso da fonte */
 }
 
 .logo img {
-  width: 32px; /* Tamanho igual ao texto */
-  height: 32px;
+  width: 32px; /* Tamanho igual ao texto *//* Largura */
+  height: 32px;/* Altura */
   margin-right: 8px; /* Espaço entre imagem e texto */
-  border-radius: 100%;
+  border-radius: 100%;/* Arredonda a imagem */
 }
+/* Container do campo de busca */
 .search-container {
-  position: relative;
+  position: relative;/* Para posicionar o ícone da lupa */
+
 }
+/* Ícone da lupa */
 .lupa-icon {
   position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 30px; /* Posição à esquerda */
+  top: 50%; /* Centro vertical */
+  transform: translateY(-50%); /* Ajuste fino vertical */
   width: 16px;
   height: 16px;
 }
+/* Campo de busca */
 .search {
   padding: 7px; /* Espaçamento interno */
   border-radius: 30px; /* Borda arredondada */
   border: 1px solid #bab8b8; /* Cor da borda */
   width: 400px; /* Largura */
-  margin-left: 20px;
+  margin-left: 20px;/* Espaço à esquerda */
   padding-left: 30px; /* Espaço pro ícone não ficar em cima do texto */
 }
+/* Navegação */
 nav {
   margin-left: 250px; /* muda a direção dos icons */
 }
+/* Links da navegação */
 nav a {
   margin: 0 10px; /* Espaçamento entre links */
   color: #333; /* Cor do texto */
   text-decoration: none; /* Remove sublinhado */
 }
+/* Ícones dentro dos links */
 nav a img {
   margin-right: 20px;
 }
@@ -91,19 +109,21 @@ main {
   display: flex; /* Layout flexível */
   padding: 20px; /* Espaçamento interno */
 }
+/* Opções do usuário no topo */
 .user-options {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: auto;
+  margin-left: auto;/* Empurra para o canto direito */
 }
+/* Imagem de perfil */
 .perfil-img {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
+  border-radius: 50%; /* Imagem circular */
+  cursor: pointer; /* Cursor de clique */
 }
-
+/* Seletor de idioma */
 .idioma {
   padding: 7px; /* Espaçamento interno */
   border-radius: 30px; /* Borda arredondada */
@@ -111,23 +131,15 @@ main {
   width: 80px; /* Largura */
   margin-left: 20px;
 }
-
-#darkModeBtn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
 /* Barra lateral */
 .sidebar {
-  width: 250px; /* Largura fixa */
+  width: 450px; /* Largura fixa */
   background-color: #ffffff; /* Fundo branco */
-  padding: 15px; /* Espaçamento interno */
+  padding: 20px; /* Espaçamento interno */
   border-radius: 10px; /* Bordas arredondadas */
   margin-right: 20px; /* Espaço à direita */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin-bottom: 500px;
+  margin-bottom: 490px;
 }
 
 .sidebar h3 {
@@ -151,13 +163,16 @@ main {
   flex-direction: column;
   align-items: center; /* Centraliza tudo */
 }
+/* Caixa de publicação */
 .publicar-box {
+  width: 1180px;
+  height: 70px;
   background-color: #ffffff;
-  padding: 15px;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 800px;
-  left: 30%;
+  position: relative;
+  left: 264px;
 }
 
 .publicar-topo {
@@ -182,45 +197,71 @@ main {
 .publicar-acoes button {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 90px;
+  gap: 8px;
+  padding: 8px 14px; /* <-- Reduzido! */
   border: none;
   border-radius: 20px;
+  font-size: 14px;
   color: #fff;
   cursor: pointer;
-  background-color: #fff;
-}
-
-.publicar-acoes button img {
-  width: 16px;
-  height: 16px;
-  color: #ffffff;
+  background-color: white; /* Ou outra cor de fundo */
+  white-space: nowrap; /* Impede o texto de quebrar linha */
 }
 /* Estilo do post */
 .post {
+  width: 700px;
   background-color: #ffffff; /* Fundo branco */
-  padding: 15px; /* Espaçamento interno */
+  padding: 20px; /* Espaçamento interno */
   border-radius: 20px; /* Bordas arredondadas */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
   margin-top: 150px; /* Espaço superior */
-  margin-bottom: 60px;
+  margin-left: 40px;
   position: relative;
-  right: 615px;
+  right: 305px;
 }
-
+.post h2 {
+  position: relative;
+  left: 2%;
+  margin-bottom: 14px; /* separa do parágrafo abaixo */
+  font-size: 15px; /* você pode ajustar o tamanho se quiser */
+}
+.post p {
+  position: relative;
+  left: 2%;
+  margin-bottom: 5%; /* dá espaço abaixo do parágrafo */
+  font-size: 15px; /* tamanho confortável de leitura */
+}
 .post-header {
-  color: #555; /* Cor do texto */
-  margin-bottom: 10px; /* Espaçamento abaixo */
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  font-size: 15px;
+  color: #000000;
+  position: relative;
+  right: 400px;
 }
-
-.post img {
-  width: 100%; /* Imagem ocupa 100% da largura */
-  border-radius: 10px; /* Bordas arredondadas */
-  margin-top: 10px; /* Espaçamento acima */
+.canal-logo {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  left: 420px;
+  border-radius: 15px;
 }
-
+strong {
+  position: relative;
+  left: 424px;
+  margin-top: 2px;
+  top: -20px;
+}
+.post-bezerro {
+  width: 500px;
+  height: 500px;
+}
 .post-actions {
   margin-top: 10px; /* Espaço superior */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 80px; /* Espaço entre os botões */
 }
 
 .post-actions button {
@@ -229,7 +270,30 @@ main {
   background: none; /* Sem fundo */
   cursor: pointer; /* Cursor de mãozinha */
 }
+/* Painel lateral */
+.painel-lateral {
+  border: none;
+  width: 250px;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  align-self: flex-start;
+}
 
+.painel-lateral h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+.atalhos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
 /* Rodapé */
 footer {
   background-color: #ffffff; /* Fundo branco */
@@ -239,4 +303,78 @@ footer {
   font-size: 14px; /* Tamanho da fonte */
   border-top: 1px solid #ddd; /* Linha separando o conteúdo do footer */
   margin-top: 40px; /* Espaço acima */
+}
+/*icones importados boxicons*/
+.bx {
+  font-size: 22px;
+  color: #000000;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.bx:hover {
+  transform: scale(1.1);
+}
+/* balão de mensagens*/
+.balao-mensagens {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 330px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 999;/* Mantém o balão acima de outros elementos */
+}
+
+.cabecalho-mensagens {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+.avatar-msg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.acoes-msg button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.corpo-mensagens {
+  display: none;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.lista-conversas {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.lista-conversas li {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.nova-conversa {
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }

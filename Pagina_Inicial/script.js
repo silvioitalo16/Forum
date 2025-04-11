@@ -1,3 +1,4 @@
+//função para like e comentarios
 let likes = 0;
 
 const likeBtn = document.getElementById("likeBtn");
@@ -18,9 +19,18 @@ commentBtn.addEventListener("click", () => {
     comentariosDiv.appendChild(p);
   }
 });
-
+//modoescuro
 const darkModeBtn = document.getElementById("darkModeBtn");
 
 darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
+//função para o balãodemensagens
+function toggleMensagens() {
+  const corpo = document.getElementById("corpoMensagens");
+  const icon = document.getElementById("toggle-icon");
+
+  corpo.style.display = corpo.style.display === "block" ? "none" : "block";
+  icon.className =
+    corpo.style.display === "block" ? "bx bx-chevron-down" : "bx bx-chevron-up";
+}

@@ -6,6 +6,10 @@
     <title>AgroHub - Fórum Rural</title>
     <!-- Linkando o arquivo de estilos -->
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -24,34 +28,14 @@
         <input type="text" placeholder="Pesquisar..." class="search" />
       </div>
       <nav>
-        <a href="#"
-          ><img
-            src="ProjetoForum/icones/House/house.png"
-            alt="Paginainicial"
-            width="16"
-            height="16"
-        /></a>
-        <a href="#"
-          ><img
-            src="ProjetoForum/icones/Friend/duas pessoas.png"
-            alt="Amizades"
-            width="16"
-            height="16"
-        /></a>
-        <a href="#"
-          ><img
-            src="ProjetoForum/icones/Message/message1.png"
-            alt="Mensagens"
-            width="16"
-            height="16"
-        /></a>
-        <a href="#"
-          ><img
-            src="ProjetoForum/icones/Notification/notificação1.png"
-            alt="Notificação"
-            width="16"
-            height="16"
-        /></a>
+        <a href="#" title="Página Inicial"
+          ><i class="bx bxs-home"></i>
+        <a href="#" title="Amizades"
+          ><i class='bx bxs-user'></i>
+        <a href="#" title="Mensagens"
+          ><i class='bx bxs-message-detail'></i>
+        <a href="#" title="Notificações"
+          ><i class="bx bxs-bell"></i>
       </nav>
       <div class="user-options">
         <a href="perfil.html">
@@ -67,11 +51,7 @@
           <option value="es">ES</option>
         </select>
         <button id="darkModeBtn">
-          <img
-            src="ProjetoForum/icones/Dark Mode/dark-mode.png"
-            alt="Modo Escuro"
-            class="icon-dark"
-          />
+          <i class="bx bxs-moon"></i>
         </button>
       </div>
     </header>
@@ -92,47 +72,99 @@
       <!-- Área principal de postagens -->
       <div class="publicar-box">
         <div class="publicar-topo">
-          <img src="ProjetoForum/Fotodeperfil/silviofoto.jpg" alt="Perfil" class="perfil-img">
-          <input type="text" placeholder="Compartilhe uma notícia..." class="publicar-input">
+          <img
+            src="ProjetoForum/Fotodeperfil/silviofoto.jpg"
+            alt="Perfil"
+            class="perfil-img"
+          />
+          <input
+            type="text"
+            placeholder="Compartilhe uma notícia..."
+            class="publicar-input"
+          />
         </div>
+
         <!-- Botões para publicar notícias -->
         <div class="publicar-acoes">
-          <button><img src="ProjetoForum/icones/Image/image1.png" alt="Mídia" width="16" height="16"></button>
-          <button><img src="ProjetoForum/icones/Question/book-alt.png" alt="Questionário" width="16" height="16"> </button>
-          <button><img src="ProjetoForum/icones/Article/artigo1.png" alt="Artigo" width="16" height="16"></button>
+          <button>
+            <a href="#" title="Midia"><i class='bx bxs-image-add'></i></a>
+          </button>
+          <button>
+           <a href="#" title="Questionário"><i class='bx bxs-book-open'></i></a>
+          </button>
+          <button>
+           <a href="#" title="Artigo"><i class='bx bxs-spreadsheet'></i></a>
+          </button>
         </div>
       </div>
 
-        <!-- Postagem -->
-        <div class="post">
-          <div class="post-header"><strong>Canal Rural</strong> - 1d atrás</div>
-          <h2>
-            JBS Ajudou A Regularizar 15 Mil Propriedades Rurais Em 4 Anos.
-          </h2>
-          <p>
-            Iniciativa ofereceu assistência que contribuiu com a reposição de
-            mais de quatro mil hectares de vegetação nativa...
-          </p>
+      <!-- Postagem -->
+      <div class="post">
+        <div class="post-header">
           <img
-            src="ProjetoForum/fotodapublicação/vaquinha.jpg"
-            alt="Vaca e bezerro"
+            src="ProjetoForum/Fotodeperfil/canalruralperfil.png"
+            class="canal-logo"
+            alt="Canal Rural"
           />
-          <!-- Ações do post -->
-          <div class="post-actions">
-            <button id="likeBtn">👍 Gostei (<span id="likes">0</span>)</button>
-            <button id="commentBtn">💬 Comentar</button>
-            <button>🔄 Compartilhar</button>
-          </div>
-          <!-- Comentários aparecerão aqui -->
-          <div id="comentarios"></div>
+          <strong><br />Canal Rural <br />- 1d atrás</strong>
         </div>
-      </section>
-    </main>
+        <h2>JBS Ajudou A Regularizar 15 Mil Propriedades Rurais Em 4 Anos.</h2>
+        <p>
+          Iniciativa ofereceu assistência que contribuiu com a reposição de mais
+          de quatro mil hectares de vegetação nativa...
+        </p>
+        <img
+          src="ProjetoForum/fotodapublicação/vaquinha.jpg"
+          class="post-bezerro"
+          alt="Vaca e bezerro"
+        />
+        <!-- Ações do post -->
+        <div class="post-actions">
+          <button id="likeBtn">👍 Gostei (<span id="likes">0</span>)</button>
+          <button id="commentBtn">💬 Comentar</button>
+          <button>🔄 Compartilhar</button>
+        </div>
+        <!-- Comentários aparecerão aqui -->
+        <div id="comentarios"></div>
+      </div>
+        <!-- Balão dos salvos -->
+      <aside class="painel-lateral">
+        <div class="atalhos">
+          <a href="#" title="Itens Salvos">
+            <i class="bx bxs-bookmark"></i>
+          </a>
+          <a href="#" title="Grupos">
+            <i class="bx bxs-group"></i>
+          </a>
+          <a href="#" title="Instituições">
+            <i class="bx bxs-building"></i>
+          </a>
+        </div>
+      </aside>
 
-    <!-- Rodapé -->
-    <footer>
-      <p>AgroHub © 2025 - Todos os direitos reservados</p>
-    </footer>
+      <!-- Área de mensagens -->
+      <div class="balao-mensagens">
+        <div class="cabecalho-mensagens" onclick="toggleMensagens()">
+          <img src="ProjetoForum/Fotodeperfil/silviofoto.jpg" alt="Perfil" class="avatar-msg">
+          <span>Mensagens</span>
+          <div class="acoes-msg">
+            <button title="Nova conversa"><i class='bx bx-edit-alt'></i></button>
+            <button title="Gerenciar"><i class='bx bx-cog'></i></button>
+            <button title="Expandir"><i class='bx bx-chevron-up' id="toggle-icon"></i></button>
+          </div>
+        </div>
+      
+        <div class="corpo-mensagens" id="corpoMensagens">
+          <ul class="lista-conversas">
+            <li>João - Online</li>
+            <li>Maria - Última vez há 1h</li>
+            <li>Lucas - Digitando...</li>
+          </ul>
+          <button class="nova-conversa">➕ Nova conversa</button>
+        </div>
+      </div>
+      
+    </main>
 
     <!-- Linkando o arquivo JavaScript -->
     <script src="script.js"></script>
